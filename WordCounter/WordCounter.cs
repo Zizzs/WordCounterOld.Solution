@@ -14,17 +14,23 @@ namespace WordCounter
             string userWord = Console.ReadLine();
             Console.WriteLine("Please enter a sentence");
             string userString = Console.ReadLine();
-            string[] userArr = userString.Split(' ');
-            foreach (string word in userArr)
-            {
-                userMatch.Calculate(userWord , word);
-            }
-            Console.WriteLine(RepeatCounter.totalMatch);
+            userMatch.StringSplitWord(userWord, userString);
+            int total = RepeatCounter.totalMatch;
+            Console.WriteLine(total);
         }
     }
 
     public class WordMatchClass
     {
+        public int StringSplitWord(string inputWord, string inputString)
+        {
+            string[] userArr = inputString.Split(' ');
+            foreach (string word in userArr)
+            {
+                Calculate(inputWord , word);
+            }
+            return RepeatCounter.totalMatch;
+        }
         public void FindMatch(string userWordInput, string stringWordInput)
         {
                 if (userWordInput == stringWordInput)
@@ -47,6 +53,13 @@ namespace WordCounter
         {
             FindMatch(tempUserString, tempWordString);
         }
+
+        public static void ClearAll()
+        {
+            RepeatCounter.totalMatch = 0;
+            
+        }
+
     }
 
     class RepeatCounter
