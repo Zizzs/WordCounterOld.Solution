@@ -63,9 +63,7 @@ namespace WordCounter
         public static void ClearAll()
         {
             RepeatCounter.totalMatch = 0;
-            
         }
-
     }
 
     class RepeatCounter
