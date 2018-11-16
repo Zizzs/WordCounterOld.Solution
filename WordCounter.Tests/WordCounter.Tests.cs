@@ -9,10 +9,21 @@ namespace WordCounter.Tests
     public class WordCounterClassTest
     {
         [TestMethod]
-        public void FindMatch_UserStringMatchesListString_Int()
+        public void FindMatch_UserwordMatchesWord_Int()
         {
             WordCounterClass testString = new WordCounterClass();
             Assert.AreEqual(1, testString.FindMatch("a", "a"));
+        }
+
+        [TestMethod]
+        public void FindMatch_UserwordMatchesString_int()
+        {
+            WordCounterClass testString = new WordCounterClass();
+
+            string userWord = "dog";
+            string userString = "dog dog";
+
+           Assert.AreEqual(2, testString.FindMatch("dog", "dog dog"));
         }
     }
 }
