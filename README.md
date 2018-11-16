@@ -1,12 +1,23 @@
-# _{Application Name}_
+# _Word Counter_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _The program will tell you the total amount of times an inputted word is contained within an inputted sentence._
 
-#### By _**{List of contributors}**_
+#### By _**Alex Williams**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_The program starts by asking the user to input a word. The word is set to a string. The program then asks the user to input a sentence which is also set to a string._
+
+_After the user inputs both, the program then checks to see how many times the word is contained within the sentence_
+
+_**Example:**_
+
+_User Word Input: "Dog"_
+
+_User Word Sentence: "The Dog went to the Dog House to play with some Dogs and Doggies."_
+
+_Expected Output: "The word Dog is used within the sentence 'The Dog went to the Dog House to play with some Dogs and Doggies.' 2 times._
+
 
 ## Specs
 
@@ -20,28 +31,26 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+Clone the Github Repository and run via git bash, or any other terminal.
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+https://github.com/Zizzs/csharp-word-counter
+
+_No Databases or Servers are required._
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No known bugs._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you have any questions, or suggestions, please email me at Zizzs17@gmail.com or visit my Github repository at https://github.com/Zizzs_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_C# and .NET_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT License*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2018 **_Alex Williams_**

@@ -8,15 +8,26 @@ namespace WordCounter
         public static void Main()
         {
             WordMatchClass userMatch = new WordMatchClass();
+            string multiple;
             Console.WriteLine("Welcome to Word Counter!");
             Console.WriteLine("The program will check to see how many times your word is contained in a sentence.");
             Console.WriteLine("Please enter your word: ");
-            string userWord = Console.ReadLine().ToLower();
+            string userWordInput = Console.ReadLine();
+            string userWord = userWordInput.ToLower();
             Console.WriteLine("Please enter a sentence");
-            string userString = Console.ReadLine().ToLower();
+            string userStringInput = Console.ReadLine();
+            string userString = userStringInput.ToLower();
             userMatch.StringSplitWord(userWord, userString);
             int total = RepeatCounter.totalMatch;
-            Console.WriteLine(total);
+            if (total > 1 || total == 0)
+            {
+                multiple = "times";
+            }
+            else
+            {
+                multiple = "time";
+            }
+            Console.WriteLine("The word " + userWordInput +" is used within the sentence " + "'" + userStringInput + "' " + total + " " + multiple + ".");
         }
     }
 
@@ -24,10 +35,10 @@ namespace WordCounter
     {
         public int StringSplitWord(string inputWord, string inputString)
         {
-            string[] userArr = inputString.Split(' ');
+            string[] userArr = inputString.Replace(",","").Replace(".","").Split(' ');
             foreach (string word in userArr)
             {
-                Calculate(inputWord , word);
+                FindMatch(inputWord , word);
             }
             return RepeatCounter.totalMatch;
         }
@@ -47,11 +58,6 @@ namespace WordCounter
         public void AddToCounter()
         {
             RepeatCounter.totalMatch++;
-        }
-
-        public void Calculate(string tempUserString, string tempWordString)
-        {
-            FindMatch(tempUserString, tempWordString);
         }
 
         public static void ClearAll()
