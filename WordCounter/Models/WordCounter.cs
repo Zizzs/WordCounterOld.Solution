@@ -11,9 +11,9 @@ namespace WordCounter
             Console.WriteLine("Welcome to Word Counter!");
             Console.WriteLine("The program will check to see how many times your word is contained in a sentence.");
             Console.WriteLine("Please enter your word: ");
-            string userWord = Console.ReadLine();
+            string userWord = Console.ReadLine().ToLower();
             Console.WriteLine("Please enter a sentence");
-            string userString = Console.ReadLine();
+            string userString = Console.ReadLine().ToLower();
             userMatch.StringSplitWord(userWord, userString);
             int total = RepeatCounter.totalMatch;
             Console.WriteLine(total);

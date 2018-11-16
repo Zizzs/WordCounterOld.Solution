@@ -11,7 +11,7 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Specs
 
 1. [_**Input: "a" and "a"- Expected Output: "1 Match"**_] User inputs the simplest string possible, in this case "a", and the program outputs that it matches once in the given string.
-
+    
 2. [_**Input: "a" and "a a" - Expected Output: "2 Matches"**_] User inputs the simplest string possible "a" and a string containing two a's, "a a". The program then outputs it has two matches.
 
 3. [_**Input "dog" and "the dog likes to run in the dog park" - Expected Output: "2 Matches"**_] User inputs a string "dog" and a string containing multiple words containing multiple instances of the word "dog." The program then cycles through the string and finds two instances of the word "dog" and outputs that it has two matches.
